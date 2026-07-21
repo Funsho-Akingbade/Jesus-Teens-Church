@@ -1,0 +1,13 @@
+{
+  "name": "jesus-teens-church-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site with SQLite-backed teen church registration form",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "pg": "^8.22.0"
+  }
+}

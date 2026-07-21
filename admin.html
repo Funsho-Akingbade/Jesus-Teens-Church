@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Registrations Admin</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+<main class="admin-shell">
+<section class="admin-header card">
+<p class="admin-kicker">Private Dashboard</p>
+<h1>Registration Records</h1>
+<p>Only authenticated admins can view this page.</p>
+</section>
+
+<section class="admin-metrics">
+<div class="card admin-metric">
+<span>Total Registrations</span>
+<strong id="totalCount">0</strong>
+</div>
+<div class="card admin-metric">
+<span>Latest Signup</span>
+<strong id="latestSignup">No entries yet</strong>
+</div>
+</section>
+
+<section class="card admin-table-card">
+<div class="admin-table-header">
+<h2>Members</h2>
+<div class="admin-actions">
+<a id="exportButton" class="btn admin-export-button" href="/api/admin/export">Export to Excel</a>
+<button id="refreshButton" type="button">Refresh</button>
+</div>
+</div>
+<p id="adminMessage" class="form-message" aria-live="polite"></p>
+<div class="table-wrap">
+<table class="admin-table">
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>School</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Registered</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="registrationTableBody">
+<tr>
+<td colspan="7">Loading registrations...</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section class="card admin-edit-card">
+<div class="admin-table-header">
+<h2>Edit Registration</h2>
+</div>
+<form id="editForm" class="admin-edit-form">
+<input id="editId" type="hidden" name="id">
+<input id="editFullName" type="text" name="fullName" placeholder="Full Name" required>
+<input id="editAge" type="number" name="age" placeholder="Age" min="10" max="25" required>
+<input id="editSchool" type="text" name="school" placeholder="School" required>
+<input id="editPhoneNumber" type="tel" name="phoneNumber" placeholder="Phone Number">
+<input id="editEmail" type="email" name="email" placeholder="Email">
+<div class="admin-actions">
+<button id="saveButton" type="submit">Save Changes</button>
+<button id="cancelEditButton" type="button" class="btn btn-secondary">Cancel</button>
+</div>
+</form>
+</section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

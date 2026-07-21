@@ -1,0 +1,16 @@
+# Node packages
+node_modules/
+
+# Environment variables
+.env
+
+# SQLite databases
+data/*.db
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# macOS
+.DS_Store
+data/admin.credentials.json
