@@ -175,26 +175,32 @@ z-index:1;
 }
 
 .hero p{
-max-width:700px;
-margin:0 auto;
-font-size:1.08rem;
-color:#050505;
+    max-width:700px;
+    margin:0 auto;
+    font-size:1.08rem;
+    color:#050505;
 }
+
 .hero-welcome{
-    font-size:2.2rem;
-    font-weight:600;
+    width:100%;
+    max-width:none;
+    font-size:2.5rem;
+    font-weight:400;
     text-transform:uppercase;
-    letter-spacing:1px;
-    color:#111;
-    margin-bottom:10px;
+    letter-spacing:2px;
+    color:#111111;
+    margin:0 0 18px;
+    line-height:1.2;
 }
 
 .hero-tagline{
-    font-size:1.35rem;
-    font-weight:500;
-    color:#c79a3b;
-    margin-top:0;
-    margin-bottom:35px;
+    width:100%;
+    max-width:none;
+    font-size:1.4rem;
+    font-weight:400;
+    color:#D4AF37;
+    margin:0 0 40px;
+    line-height:1.5;
 }
 
 .hero-actions{
