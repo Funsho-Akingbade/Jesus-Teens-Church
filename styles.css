@@ -257,37 +257,6 @@ border:1px solid rgba(124,83,48,0.12);
 box-shadow:0 14px 28px rgba(135,79,37,0.12);
 }
 
-.hero-stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:16px;
-margin-top:36px;
-}
-
-.stat-pill{
-padding:18px;
-border-radius:18px;
-background:
-var(--card-accent),
-linear-gradient(180deg,rgba(255,250,241,0.9),rgba(247,223,186,0.78));
-border:1px solid rgba(130,67,30,0.24);
-backdrop-filter:blur(10px);
-text-align:left;
-box-shadow:0 16px 40px rgba(105,59,29,0.2);
-color:var(--ink);
-}
-
-.stat-pill strong,
-.stat-pill span{
-display:block;
-}
-
-.stat-pill span{
-font-size:0.92rem;
-color:rgba(47,33,24,0.72);
-margin-top:4px;
-}
-
 .section{
 position:relative;
 padding:100px 10%;
