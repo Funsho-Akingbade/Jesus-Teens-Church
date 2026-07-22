@@ -180,6 +180,22 @@ margin:0 auto;
 font-size:1.08rem;
 color:#050505;
 }
+.hero-welcome{
+    font-size:2.2rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#111;
+    margin-bottom:10px;
+}
+
+.hero-tagline{
+    font-size:1.35rem;
+    font-weight:500;
+    color:#c79a3b;
+    margin-top:0;
+    margin-bottom:35px;
+}
 
 .hero-actions{
 display:flex;
