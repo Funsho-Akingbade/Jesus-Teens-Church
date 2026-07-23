@@ -5,6 +5,36 @@ once:true
 });
 }
 
+const lazyImages = document.querySelectorAll("img.lazy-img[data-src]");
+
+const loadLazyImage = function (img) {
+if (!img.dataset.src) {
+return;
+}
+
+img.src = img.dataset.src;
+img.removeAttribute("data-src");
+};
+
+if ("IntersectionObserver" in window && lazyImages.length) {
+const lazyImageObserver = new IntersectionObserver(function (entries, observer) {
+entries.forEach(function (entry) {
+if (entry.isIntersecting) {
+loadLazyImage(entry.target);
+observer.unobserve(entry.target);
+}
+});
+}, {
+rootMargin: "800px 0px 800px 0px"
+});
+
+lazyImages.forEach(function (img) {
+lazyImageObserver.observe(img);
+});
+} else {
+lazyImages.forEach(loadLazyImage);
+}
+
 const form = document.getElementById("registerForm");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -219,6 +249,11 @@ const activeImage = activeGallery[activeIndex];
 
 if (!activeImage) {
 return;
+}
+
+if (activeImage.dataset.src) {
+activeImage.src = activeImage.dataset.src;
+activeImage.removeAttribute("data-src");
 }
 
 lightboxImage.src = activeImage.src;
