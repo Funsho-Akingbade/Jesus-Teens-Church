@@ -77,6 +77,16 @@ function isAuthorized(request) {
   return username === ADMIN_USERNAME && password === ADMIN_PASSWORD;
 }
 
+const LONG_CACHE_EXTENSIONS = new Set([
+  ".css",
+  ".js",
+  ".png",
+  ".jpg",
+  ".jpeg",
+  ".svg",
+  ".webp",
+]);
+
 function serveFile(filePath, response) {
   fs.readFile(filePath, (error, content) => {
     if (error) {
@@ -90,7 +100,15 @@ function serveFile(filePath, response) {
     }
 
     const ext = path.extname(filePath).toLowerCase();
-    response.writeHead(200, { "Content-Type": MIME_TYPES[ext] || "application/octet-stream" });
+    const headers = { "Content-Type": MIME_TYPES[ext] || "application/octet-stream" };
+
+    if (LONG_CACHE_EXTENSIONS.has(ext)) {
+      headers["Cache-Control"] = "public, max-age=604800, must-revalidate";
+    } else {
+      headers["Cache-Control"] = "no-cache";
+    }
+
+    response.writeHead(200, headers);
     response.end(content);
   });
 }
