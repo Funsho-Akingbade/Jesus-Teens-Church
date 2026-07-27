@@ -39,10 +39,6 @@ const navDropdownLinks = document.querySelectorAll(".nav-dropdown > a");
 
 navDropdownLinks.forEach(function (link) {
 link.addEventListener("click", function (e) {
-if (window.innerWidth <= 900) {
-return;
-}
-
 const parentItem = link.closest(".nav-dropdown");
 const isOpen = parentItem.classList.contains("open");
 
