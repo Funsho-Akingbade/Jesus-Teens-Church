@@ -19,6 +19,7 @@
 <body>
 <div class="scroll-progress" aria-hidden="true"></div>
 
+<div class="site-header">
 <nav class="nav">
 <div class="logo-container">
 <img src="images/logo.png" alt="Jesus Teens Church Logo" class="logo-img" decoding="async">
@@ -31,15 +32,20 @@
 </button>
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#departments">Departments</a></li>
+<li class="nav-dropdown">
+<a href="#about">About <span class="nav-caret" aria-hidden="true">&#9662;</span></a>
+<ul class="nav-dropdown-menu">
 <li><a href="#programs">Programs</a></li>
+<li><a href="#blog">Coordinators</a></li>
+</ul>
+</li>
+<li><a href="#departments">Departments</a></li>
 <li><a href="#sermons">Sermons</a></li>
 <li><a href="#gallery">Gallery</a></li>
-<li><a href="#blog">Coordinators</a></li>
-<li><a href="#join">Join</a></li>
 </ul>
 </nav>
+<a href="#join" class="btn nav-cta">Register to Join</a>
+</div>
 
 <section id="home" class="hero">
 <div class="hero-overlay">
