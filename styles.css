@@ -61,6 +61,7 @@ box-shadow:0 0 18px rgba(216,132,58,0.44);
 position:sticky;
 top:0;
 display:flex;
+flex-wrap:nowrap;
 align-items:center;
 gap:16px;
 width:min(1180px,calc(100% - 32px));
@@ -154,7 +155,8 @@ transition:opacity 0.2s ease,transform 0.2s ease,visibility 0.2s ease;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown:focus-within .nav-dropdown-menu{
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu{
 opacity:1;
 visibility:visible;
 transform:translateY(0);

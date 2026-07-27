@@ -35,6 +35,40 @@ lazyImageObserver.observe(img);
 lazyImages.forEach(loadLazyImage);
 }
 
+const navDropdownLinks = document.querySelectorAll(".nav-dropdown > a");
+
+navDropdownLinks.forEach(function (link) {
+link.addEventListener("click", function (e) {
+if (window.innerWidth <= 900) {
+return;
+}
+
+const parentItem = link.closest(".nav-dropdown");
+const isOpen = parentItem.classList.contains("open");
+
+document.querySelectorAll(".nav-dropdown.open").forEach(function (openItem) {
+if (openItem !== parentItem) {
+openItem.classList.remove("open");
+}
+});
+
+if (!isOpen) {
+e.preventDefault();
+parentItem.classList.add("open");
+} else {
+parentItem.classList.remove("open");
+}
+});
+});
+
+document.addEventListener("click", function (e) {
+document.querySelectorAll(".nav-dropdown.open").forEach(function (openItem) {
+if (!openItem.contains(e.target)) {
+openItem.classList.remove("open");
+}
+});
+});
+
 const form = document.getElementById("registerForm");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
