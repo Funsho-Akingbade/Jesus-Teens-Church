@@ -199,6 +199,11 @@ if (backToTopButton) {
 backToTopButton.classList.toggle("visible", scrollTop > 420);
 }
 
+const navEl = document.querySelector(".nav");
+if (navEl) {
+navEl.classList.toggle("scrolled", scrollTop > 10);
+}
+
 updateActiveSection();
 };
 

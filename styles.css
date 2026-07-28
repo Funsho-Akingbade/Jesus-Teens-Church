@@ -72,6 +72,11 @@ z-index:1000;
 border:1px solid rgba(148,163,184,0.12);
 border-radius:22px;
 box-shadow:0 18px 42px rgba(2,6,23,0.28);
+transition:border-radius 0.3s ease;
+}
+
+.nav.scrolled{
+border-radius:0;
 }
 
 .nav-cta{
