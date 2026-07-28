@@ -53,6 +53,14 @@ e.preventDefault();
 parentItem.classList.add("open");
 } else {
 parentItem.classList.remove("open");
+const navLinksEl = document.querySelector(".nav-links");
+const navToggleEl = document.querySelector(".nav-toggle");
+if (navLinksEl) {
+navLinksEl.classList.remove("open");
+}
+if (navToggleEl) {
+navToggleEl.setAttribute("aria-expanded", "false");
+}
 }
 });
 });
@@ -157,7 +165,9 @@ navToggle.setAttribute("aria-expanded", String(isOpen));
 });
 }
 
-navAnchors.forEach(function (anchor) {
+const navCloseAnchors = document.querySelectorAll(".nav-links a:not(.nav-dropdown > a)");
+
+navCloseAnchors.forEach(function (anchor) {
 anchor.addEventListener("click", function () {
 if (navLinks) {
 navLinks.classList.remove("open");
