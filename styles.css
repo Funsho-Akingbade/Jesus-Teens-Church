@@ -1314,17 +1314,18 @@ display:none;
 
 .nav-cta-mobile-item{
 display:block;
-margin-top:6px;
+margin-top:8px;
 }
 
 .nav-cta-mobile-item a{
 display:inline-block;
-padding:12px 28px;
+padding:10px 22px;
+font-size:0.9rem;
 border-radius:999px;
 font-weight:800;
 background:linear-gradient(135deg,#b8860b,#daa520 50%,#f5c842);
 color:#1a1100;
-box-shadow:0 14px 26px rgba(184,134,11,0.30);
+box-shadow:0 12px 22px rgba(184,134,11,0.28);
 }
 
 .nav-cta-mobile-item a::after{
@@ -1364,7 +1365,7 @@ box-shadow:none;
 border:none;
 background:transparent;
 margin:0;
-padding-left:14px;
+padding:0 0 0 14px;
 max-height:0;
 overflow:hidden;
 transition:max-height 0.3s ease;
