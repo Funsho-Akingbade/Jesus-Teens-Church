@@ -1157,6 +1157,12 @@ max-width:480px;
 color:var(--text-soft);
 font-size:0.92rem;
 line-height:1.5;
+text-decoration:none;
+transition:color 0.3s ease;
+}
+
+.footer-address:hover{
+color:var(--page-gold);
 }
 
 .footer-pin-icon{
