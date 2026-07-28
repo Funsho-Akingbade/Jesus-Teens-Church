@@ -81,6 +81,9 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+}
+
+.btn.nav-cta{
 color:#1a1100;
 }
 
