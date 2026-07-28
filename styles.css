@@ -699,6 +699,15 @@ box-shadow:0 22px 42px rgba(0,0,0,0.70);
 color:white;
 }
 
+.table-scroll{
+overflow-x:auto;
+-webkit-overflow-scrolling:touch;
+}
+
+.table-scroll table{
+min-width:360px;
+}
+
 .card::before,
 .table-card::before{
 content:"";
@@ -1488,7 +1497,7 @@ aspect-ratio:4 / 3;
 }
 
 #gallery .gallery-more-button{
-min-height:auto;
+min-height:160px;
 aspect-ratio:4 / 3;
 }
 
