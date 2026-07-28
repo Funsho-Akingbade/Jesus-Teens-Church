@@ -81,10 +81,16 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+line-height:1;
+}
+
+.nav-cta::after{
+display:none;
 }
 
 .btn.nav-cta{
 color:#1a1100;
+padding:12px 26px;
 }
 
 .nav-cta-mobile-item{
